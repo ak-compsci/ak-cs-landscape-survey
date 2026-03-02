@@ -1,0 +1,55 @@
+id,District,PK,KG,1,2,3,4,5,6,7,8,9,10,11,12,Total KG-12,Total PK-12
+2,Denali Borough School District,44,68,69,56,77,81,88,85,83,84,91,87,98,110,1077,1121
+3,Alaska Gateway School District,23,22,22,20,26,29,34,27,28,26,27,29,28,36,354,377
+4,Aleutian Region School District,1,1,1,3,1,4,3,2,1,2,0,1,1,1,21,22
+5,Anchorage School District,983,2802,2938,3013,3137,3330,3155,3171,3136,3201,3200,3095,3180,3330,40688,41671
+6,Annette Island School District,17,23,17,15,16,16,22,16,19,24,23,28,20,29,268,285
+7,Bering Strait School District,87,114,106,113,140,109,132,118,119,143,137,140,113,134,1618,1705
+8,Bristol Bay Borough School District,11,5,8,10,2,5,9,6,8,5,7,8,8,4,85,96
+9,Chatham School District,4,6,17,10,13,10,16,10,14,11,10,9,13,14,153,157
+10,Chugach School District,58,55,46,46,58,42,52,53,53,46,49,49,40,44,633,691
+11,Copper River School District,12,34,21,27,34,28,31,29,32,22,28,33,25,30,374,386
+12,Cordova City School District,8,22,29,27,40,34,36,36,29,21,22,16,23,23,358,366
+13,Craig City School District,0,36,31,31,35,38,42,44,46,50,58,40,51,48,550,550
+14,Delta/Greely School District,16,68,80,73,73,75,81,81,72,82,84,93,64,81,1007,1023
+15,Dillingham City School District,17,14,29,18,34,29,31,32,39,28,33,28,32,31,378,395
+16,Fairbanks North Star Borough School District,152,750,839,867,883,881,887,894,887,834,862,814,897,827,11122,11274
+17,Galena City School District,342,584,633,652,698,634,626,627,609,585,658,628,598,747,8279,8621
+18,Haines Borough School District,0,11,19,17,19,15,20,15,17,27,27,18,19,19,243,243
+19,Hoonah City School District,1,5,7,7,11,8,4,15,9,8,8,11,5,6,104,105
+20,Hydaburg City School District,11,5,7,3,2,4,3,4,7,10,3,6,2,6,62,73
+21,Iditarod Area School District,11,13,19,21,21,20,24,22,28,13,22,13,15,12,243,254
+22,Juneau Borough School District,179,241,227,238,282,303,280,347,307,296,328,299,339,322,3809,3988
+23,Kake City School District,15,8,12,10,8,10,8,5,11,12,4,6,10,8,112,127
+24,Kenai Peninsula Borough School District,156,539,566,584,610,667,628,603,631,662,669,678,714,658,8209,8365
+25,Ketchikan Gateway Borough School District,88,96,117,139,128,136,152,154,142,162,169,161,146,169,1871,1959
+27,Klawock City School District,1,6,5,16,11,11,11,11,4,8,5,6,6,9,109,110
+28,Kodiak Island Borough School District,67,108,118,152,146,164,155,171,179,156,137,176,164,157,1983,2050
+29,Kuspuk School District,27,21,15,15,30,23,25,25,20,25,15,13,17,28,272,299
+30,Lake and Peninsula Borough School District,25,24,16,26,25,25,26,21,18,24,16,27,14,25,287,312
+31,Lower Kuskokwim School District,130,315,318,286,311,278,273,312,281,274,342,238,224,214,3666,3796
+32,Lower Yukon School District,6,176,179,175,163,134,146,144,150,163,123,122,124,114,1913,1919
+33,Matanuska-Susitna Borough School District,454,1375,1392,1391,1490,1625,1613,1597,1657,1543,1636,1558,1539,1487,19903,20357
+34,Nenana City School District,68,164,133,156,165,137,137,165,145,181,134,164,350,200,2231,2299
+35,Nome Public Schools,4,52,36,44,68,53,59,58,53,59,70,45,42,35,674,678
+36,North Slope Borough School District,138,93,133,119,123,133,126,131,133,129,122,110,120,138,1610,1748
+37,Northwest Arctic Borough School District,122,123,130,124,162,129,126,145,144,151,126,141,123,132,1756,1878
+38,Pelican City School District,0,0,1,0,3,1,2,2,1,0,3,0,1,2,16,16
+39,Petersburg Borough School District,4,28,21,44,41,30,40,40,34,46,39,45,32,33,473,477
+40,Pribilof School District,8,6,7,9,6,2,6,5,4,4,1,3,1,2,56,64
+42,Sitka School District,30,78,57,75,84,82,70,80,69,90,103,82,115,97,1082,1112
+43,Skagway School District,10,4,7,3,13,11,8,7,10,4,11,18,11,12,119,129
+44,Southeast Island School District,12,7,16,9,14,6,27,13,12,17,12,13,15,27,188,200
+45,Southwest Region School District,46,48,47,48,44,64,43,39,40,50,30,38,24,33,548,594
+46,Saint Mary's School District,11,17,11,11,9,15,16,12,13,16,17,7,14,12,170,181
+47,Unalaska City School District,12,30,23,33,29,24,24,22,22,29,23,26,37,29,351,363
+48,Valdez City School District,50,34,42,36,38,50,37,38,50,45,39,45,44,29,527,577
+49,Wrangell Public School District,4,20,23,22,16,20,27,14,20,19,20,21,16,20,258,262
+50,Yakutat School District,0,5,4,7,10,9,10,12,2,12,9,2,2,4,88,88
+51,Yukon Flats School District,3,15,9,14,13,12,12,18,7,19,16,21,12,9,177,180
+52,Yukon-Koyukuk School District,90,193,239,282,276,309,279,273,288,285,271,340,368,466,3869,3959
+54,Yupiit School District,6,44,46,59,38,30,36,51,35,43,30,38,38,35,523,529
+55,Kashunamiut School District,16,29,21,22,30,28,16,26,26,12,30,29,21,17,307,323
+56,Aleutians East Borough School District,13,14,7,9,12,13,8,14,12,10,14,17,12,13,155,168
+98,Mount Edgecumbe,0,0,0,0,0,0,0,0,0,0,110,103,90,85,388,388
+1,Grand Total,3593,8551,8916,9187,9718,9926,9722,9842,9756,9768,10023,9738,10017,10153,125317,128910

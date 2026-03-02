@@ -1,0 +1,610 @@
+{
+  "districts": {
+    "Southeast Island School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "26-50 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses",
+        "Geographic isolation or small school size"
+      ],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 32,
+        "3-5": 47,
+        "6-8": 42,
+        "9-12": 67,
+        "Total": 188
+      }
+    },
+    "Yukon-Koyukuk School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 714,
+        "3-5": 864,
+        "6-8": 846,
+        "9-12": 1445,
+        "Total": 3869
+      }
+    },
+    "Nenana City School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Scheduling constraints or conflicts with other required courses",
+        "Uncertainty about how CS fits into graduation requirements",
+        "Limited awareness of CS curriculum options"
+      ],
+      "CS_Grade_Bands": [
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 453,
+        "3-5": 439,
+        "6-8": 491,
+        "9-12": 848,
+        "Total": 2231
+      }
+    },
+    "Galena City School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "26-50 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Lack of qualified or trained teachers",
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses"
+      ],
+      "CS_Grade_Bands": [
+        "K-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 1869,
+        "3-5": 1958,
+        "6-8": 1821,
+        "9-12": 2631,
+        "Total": 8279
+      }
+    },
+    "Bering Strait School District": {
+      "CS_Offered": "Unknown",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 333,
+        "3-5": 381,
+        "6-8": 380,
+        "9-12": 524,
+        "Total": 1618
+      }
+    },
+    "Petersburg Borough School District": {
+      "CS_Offered": "Unknown",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 93,
+        "3-5": 111,
+        "6-8": 120,
+        "9-12": 149,
+        "Total": 473
+      }
+    },
+    "Haines Borough School District": {
+      "CS_Offered": "Unknown",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 47,
+        "3-5": 54,
+        "6-8": 59,
+        "9-12": 83,
+        "Total": 243
+      }
+    },
+    "Copper River School District": {
+      "CS_Offered": "Unknown",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 82,
+        "3-5": 93,
+        "6-8": 83,
+        "9-12": 116,
+        "Total": 374
+      }
+    },
+    "Yukon Flats School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "26-50 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Lack of qualified or trained teachers",
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses",
+        "Low student enrollment or interest",
+        "Lack of administrator support or prioritization",
+        "Limited awareness of CS curriculum options",
+        "Geographic isolation or small school size"
+      ],
+      "CS_Grade_Bands": [
+        "K-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 38,
+        "3-5": 37,
+        "6-8": 44,
+        "9-12": 58,
+        "Total": 177
+      }
+    },
+    "Bristol Bay Borough School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 23,
+        "3-5": 16,
+        "6-8": 19,
+        "9-12": 27,
+        "Total": 85
+      }
+    },
+    "Saint Mary's School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses"
+      ],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 39,
+        "3-5": 40,
+        "6-8": 41,
+        "9-12": 50,
+        "Total": 170
+      }
+    },
+    "Yupiit School District": {
+      "CS_Offered": "I am unsure",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 149,
+        "3-5": 104,
+        "6-8": 129,
+        "9-12": 141,
+        "Total": 523
+      }
+    },
+    "Lower Yukon School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "More than 200 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses",
+        "Technology or infrastructure limitations (devices, internet, etc.)"
+      ],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 530,
+        "3-5": 443,
+        "6-8": 457,
+        "9-12": 483,
+        "Total": 1913
+      }
+    },
+    "Fairbanks North Star Borough School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "101-200 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Technology or infrastructure limitations (devices, internet, etc.)"
+      ],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 2456,
+        "3-5": 2651,
+        "6-8": 2615,
+        "9-12": 3400,
+        "Total": 11122
+      }
+    },
+    "Anchorage School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 8753,
+        "3-5": 9622,
+        "6-8": 9508,
+        "9-12": 12805,
+        "Total": 40688
+      }
+    },
+    "Lower Kuskokwim School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "26-50 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses"
+      ],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 919,
+        "3-5": 862,
+        "6-8": 867,
+        "9-12": 1018,
+        "Total": 3666
+      }
+    },
+    "Mount Edgecumbe": {
+      "CS_Offered": "No, computer science courses are not currently offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 0,
+        "3-5": 0,
+        "6-8": 0,
+        "9-12": 388,
+        "Total": 388
+      }
+    },
+    "Aleutian Region School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 5,
+        "3-5": 8,
+        "6-8": 5,
+        "9-12": 3,
+        "Total": 21
+      }
+    },
+    "North Slope Borough School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Lack of qualified or trained teachers",
+        "Scheduling constraints or conflicts with other required courses",
+        "Geographic isolation or small school size"
+      ],
+      "CS_Grade_Bands": [
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 345,
+        "3-5": 382,
+        "6-8": 393,
+        "9-12": 490,
+        "Total": 1610
+      }
+    },
+    "Alaska Gateway School District": {
+      "CS_Offered": "No, computer science courses are not currently offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 64,
+        "3-5": 89,
+        "6-8": 81,
+        "9-12": 120,
+        "Total": 354
+      }
+    },
+    "Valdez City School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 112,
+        "3-5": 125,
+        "6-8": 133,
+        "9-12": 157,
+        "Total": 527
+      }
+    },
+    "Cordova City School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "51-100 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Scheduling constraints or conflicts with other required courses",
+        "Small staff."
+      ],
+      "CS_Grade_Bands": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 78,
+        "3-5": 110,
+        "6-8": 86,
+        "9-12": 84,
+        "Total": 358
+      }
+    },
+    "Lake and Peninsula Borough School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "Yes, required for all students",
+      "Enrollment": "101-200 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Scheduling constraints or conflicts with other required courses",
+        "Funding and PD for teachers"
+      ],
+      "CS_Grade_Bands": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 66,
+        "3-5": 76,
+        "6-8": 63,
+        "9-12": 82,
+        "Total": 287
+      }
+    },
+    "Nome Public Schools": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No funding for CS curriculum or resources",
+        "No funding for CS teaching positions",
+        "Geographic isolation or small school size"
+      ],
+      "CS_Grade_Bands": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 132,
+        "3-5": 180,
+        "6-8": 170,
+        "9-12": 192,
+        "Total": 674
+      }
+    },
+    "Wrangell Public School District": {
+      "CS_Offered": "No, computer science courses are not currently offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 65,
+        "3-5": 63,
+        "6-8": 53,
+        "9-12": 77,
+        "Total": 258
+      }
+    },
+    "Dillingham City School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "26-50 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "No teacher interest in teaching CS",
+        "No funding for CS teaching positions",
+        "Scheduling constraints or conflicts with other required courses"
+      ],
+      "CS_Grade_Bands": [
+        "6-8",
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 61,
+        "3-5": 94,
+        "6-8": 99,
+        "9-12": 124,
+        "Total": 378
+      }
+    },
+    "Chatham School District": {
+      "CS_Offered": "No, computer science courses are not currently offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 33,
+        "3-5": 39,
+        "6-8": 35,
+        "9-12": 46,
+        "Total": 153
+      }
+    },
+    "Craig City School District": {
+      "CS_Offered": "Unknown",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 98,
+        "3-5": 115,
+        "6-8": 140,
+        "9-12": 197,
+        "Total": 550
+      }
+    },
+    "Juneau Borough School District": {
+      "CS_Offered": "Yes, computer science courses are offered",
+      "CS_Required": "No",
+      "Enrollment": "1-25 students",
+      "LMS": "Unknown",
+      "Barriers": [
+        "Lack of qualified or trained teachers",
+        "No teacher interest in teaching CS",
+        "No funding for CS teaching positions"
+      ],
+      "CS_Grade_Bands": [
+        "9-12"
+      ],
+      "Enrollment_By_Band": {
+        "K-2": 706,
+        "3-5": 865,
+        "6-8": 950,
+        "9-12": 1288,
+        "Total": 3809
+      }
+    },
+    "Kuspuk School District": {
+      "CS_Offered": "No, computer science courses are not currently offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 51,
+        "3-5": 78,
+        "6-8": 70,
+        "9-12": 73,
+        "Total": 272
+      }
+    },
+    "Hoonah City School District": {
+      "CS_Offered": "No, computer science courses are not currently offered",
+      "CS_Required": "Unknown",
+      "Enrollment": "Unknown",
+      "LMS": "Unknown",
+      "Barriers": [],
+      "CS_Grade_Bands": [],
+      "Enrollment_By_Band": {
+        "K-2": 19,
+        "3-5": 23,
+        "6-8": 32,
+        "9-12": 30,
+        "Total": 104
+      }
+    }
+  },
+  "statewide": {
+    "CS_Offered_Counts": {
+      "Yes, computer science courses are offered": 28,
+      "No, computer science courses are not currently offered": 7,
+      "I am unsure": 1
+    },
+    "Top_Barriers": {
+      "No funding for CS teaching positions": 14,
+      "Scheduling constraints or conflicts with other required courses": 14,
+      "No funding for CS curriculum or resources": 12,
+      "Lack of qualified or trained teachers": 9,
+      "Geographic isolation or small school size": 8
+    },
+    "CS_Enrollment_By_Band": {
+      "K-2": 2770,
+      "3-5": 3329,
+      "6-8": 17192,
+      "9-12": 26654
+    },
+    "No_CS_Enrollment_By_Band": {
+      "K-2": 25945,
+      "3-5": 28101,
+      "6-8": 13980,
+      "9-12": 16438
+    },
+    "Total_Districts": 53,
+    "Surveyed_Districts": 31
+  }
+}

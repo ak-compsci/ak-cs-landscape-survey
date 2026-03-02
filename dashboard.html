@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaska CS Landscape Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="w-[98%] max-w-[1500px] mt-4 bg-white rounded-xl shadow border border-blue-100 px-6 py-4">
+        <p class="text-sm text-gray-700 leading-relaxed">This dashboard visualizes responses from the <a href="https://www.surveymonkey.com/r/2FYFCHH" class="text-blue-600 underline hover:text-blue-800" target="_blank">Alaska CS Landscape Survey</a>, administered by the Alaska Department of Education &amp; Early Development (DEED). It maps which districts currently offer computer science courses, the grade bands served, student enrollment figures, and the most commonly reported barriers to CS instruction. The goal is to provide a clear, data-driven picture of CS education across the state so DEED can direct resources, professional development, and funding where they are needed most.</p><br>
+        <p class="text-sm text-gray-700 leading-relaxed"><strong>Computer science (CS) education includes courses and instruction in coding, programming, computational thinking, robotics, game design, web development, cybersecurity, data science, and artificial intelligence.</strong></p>
+    </div>
+
+    <div class="container">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Alaska Computer Science Landscape Dashboard</h1>
+        <div class="flex gap-4 mb-4 text-sm font-medium text-gray-600">
+            <span class="flex items-center gap-2"><div class="w-4 h-4 rounded" style="background-color:#3cb44b"></div> CS Offered (colored)</span>
+            <span class="flex items-center gap-2"><div class="w-4 h-4 rounded" style="background-color:#fca5a5"></div> CS Not Offered / No Data</span>
+        </div>
+
+        <div class="content-area">
+            <div class="map-section" id="map-container">
+                <div id="leaflet-map"></div>
+            </div>
+
+            <div class="data-section" id="data-panel">
+                <div class="flex justify-between items-center mb-4 border-b pb-2">
+                    <h2 id="panel-title" class="text-2xl font-semibold text-gray-800">Statewide Overview</h2>
+                    <button id="reset-btn" class="hidden text-sm bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded shadow transition-colors">Back to State</button>
+                </div>
+                
+                <div id="district-details" class="hidden bg-white p-5 rounded-lg shadow-sm border text-gray-700">
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div><p class="text-xs text-gray-500 uppercase tracking-wide">CS Offered</p><p id="dt-offered" class="font-semibold text-lg"></p></div>
+                        <div><p class="text-xs text-gray-500 uppercase tracking-wide">Graduation Req.</p><p id="dt-required" class="font-semibold"></p></div>
+                        <div><p class="text-xs text-gray-500 uppercase tracking-wide">CS Enrollment (survey)</p><p id="dt-enrollment" class="font-semibold"></p></div>
+                        <div><p class="text-xs text-gray-500 uppercase tracking-wide">CS Grade Bands</p><p id="dt-gradebands" class="font-semibold"></p></div>
+                    </div>
+                    <h4 class="text-sm font-medium text-gray-600 mb-1">District Enrollment by Grade Band</h4>
+                    <div class="chart-container" style="height: 200px;"><canvas id="districtEnrollChart"></canvas></div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">Reported Barriers</p>
+                        <ul id="dt-barriers" class="list-disc pl-5 space-y-1 text-sm bg-gray-50 p-3 rounded"></ul>
+                    </div>
+                </div>
+
+                <div id="statewide-charts">
+                    <h3 class="text-lg font-medium text-gray-700 mb-2">CS Courses Offered — All Districts</h3>
+                    <p class="text-xs text-gray-500 mb-1" id="pie-subtitle"></p>
+                    <div class="chart-container"><canvas id="pieChart"></canvas></div>
+                    <h3 class="text-lg font-medium text-gray-700 mb-2 mt-6">Student Enrollment by Grade Band</h3>
+                    <p class="text-xs text-gray-500 mb-1">Enrollment in surveyed districts, split by whether CS is offered at each grade band</p>
+                    <div class="chart-container" style="height: 280px;"><canvas id="enrollChart"></canvas></div>
+                    <h3 class="text-lg font-medium text-gray-700 mb-2 mt-6">Top 5 Barriers (Statewide)</h3>
+                    <div class="chart-container" style="height: 300px;"><canvas id="barChart"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full max-w-[1500px] px-4 py-4 mb-4">
+        <p class="text-xs text-gray-500 leading-relaxed text-center"><strong>Disclaimer:</strong> The data presented on this dashboard is based on voluntary survey responses. If a district appears to have no CS courses offered, or if the information shown is inaccurate, it is because we have not yet received updated data from that district. Districts are welcome and encouraged to complete the <a href="https://www.surveymonkey.com/r/2FYFCHH" class="text-blue-600 underline hover:text-blue-800">Alaska CS Landscape Survey</a> so we can update the map and provide a more accurate representation of computer science education across the state.</p><br>
+        <p class="text-xs text-gray-500 leading-relaxed text-center">Enrollment information from the <a href="https://education.alaska.gov/data-center" class="text-blue-600 underline hover:text-blue-800">Alaska Department of Education Data Center - Enrollment Data for SY 2025-2026</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
