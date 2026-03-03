@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaska CS Landscape Report 2024–2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', Georgia, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            color: #1e293b;
+        }
+        /* Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+        }
+        /* Report body */
+        .report-body {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+        h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.15; }
+        h2 { font-size: 1.45rem; font-weight: 700; color: #1e3a5f; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; margin-top: 2.5rem; margin-bottom: 0.9rem; }
+        h3 { font-size: 1.1rem; font-weight: 600; color: #334155; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        p  { line-height: 1.75; color: #334155; margin-bottom: 1rem; }
+        li { line-height: 1.7; color: #334155; margin-bottom: 0.25rem; }
+        a  { color: #2563eb; text-decoration: underline; }
+        a:hover { color: #1d4ed8; }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat-tile {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.1rem 1rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .stat-tile .number { font-size: 2.4rem; font-weight: 800; line-height: 1; margin: 0.25rem 0; }
+        .stat-tile .label  { font-size: 0.78rem; color: #64748b; }
+
+        .callout {
+            border-left: 4px solid #2563eb;
+            background: #eff6ff;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1.25rem 0;
+        }
+        .callout.green  { border-color: #15803d; background: #f0fdf4; }
+        .callout.amber  { border-color: #d97706; background: #fffbeb; }
+        .callout.red    { border-color: #dc2626; background: #fef2f2; }
+        .callout.gray   { border-color: #94a3b8; background: #f8fafc; }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .data-table th {
+            background: #1e3a5f;
+            color: white;
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .data-table td { padding: 0.55rem 0.9rem; border-bottom: 1px solid #e2e8f0; }
+        .data-table tr:nth-child(even) td { background: #f8fafc; }
+
+        .badge {
+            display: inline-block;
+            padding: 0.15rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .section-anchor { scroll-margin-top: 3.5rem; }
+
+        .map-embed {
+            width: 100%;
+            height: 480px;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        @media print {
+            .sticky-nav, .no-print { display: none !important; }
+            .report-body { padding: 1rem; }
+            body { background: white; }
+        }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.7rem; }
+            h2 { font-size: 1.2rem; }
+            .report-body { padding: 1.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sticky navigation -->
+<nav class="sticky-nav">
+    <div style="max-width:860px;" class="mx-auto px-4 py-2 flex items-center justify-between flex-wrap gap-2">
+        <div class="text-sm font-semibold text-gray-700">Alaska CS Landscape Report</div>
+        <div class="flex gap-3 text-xs text-blue-600 flex-wrap">
+            <a href="#summary"        class="hover:underline">Summary</a>
+            <a href="#about"          class="hover:underline">About</a>
+            <a href="#data-sources"   class="hover:underline">Data</a>
+            <a href="#findings"       class="hover:underline">Findings</a>
+            <a href="#gaps"           class="hover:underline">Gaps</a>
+            <a href="#recommendations" class="hover:underline">Recommendations</a>
+            <a href="#next-steps"     class="hover:underline">Next Steps</a>
+            <a href="index.html"      class="font-bold text-indigo-600 hover:underline">&#9654; Interactive Map</a>
+        </div>
+    </div>
+</nav>
+
+<div class="report-body">
+
+    <!-- Cover -->
+    <div class="mt-2 mb-8">
+        <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-2">Alaska Department of Education &amp; Early Development</div>
+        <h1 class="text-gray-900">The State of Computer Science Education in Alaska</h1>
+        <p class="text-lg text-gray-500 mt-1 mb-3">A landscape report based on 2024-25 course data and the 2025-26 CS Landscape Survey</p>
+        <div class="flex gap-3 flex-wrap text-xs text-gray-500">
+            <span>Last updated: March 2026</span>
+            <span>&middot;</span>
+            <span>Data sources: AK DEED, Alaska CS Landscape Survey</span>
+            <span>&middot;</span>
+            <a href="index.html" class="text-blue-600">View Interactive Map</a>
+            <span>&middot;</span>
+            <a href="dashboard.html" class="text-blue-600">Survey Dashboard</a>
+        </div>
+    </div>
+
+    <!-- ─── Executive Summary ─────────────────────────────────────────────── -->
+    <section id="summary" class="section-anchor">
+        <h2>Executive Summary</h2>
+        <p>
+            Alaska faces a growing gap between the demand for computing skills and the availability of computer science (CS) education in its K-12 schools. This report synthesizes two complementary data sources to provide the most complete picture yet of where CS is happening, where it isn't, and what is standing in the way.
+        </p>
+
+        <div class="stat-grid">
+            <div class="stat-tile">
+                <div class="label">Districts with CS</div>
+                <div class="number" style="color:#2563eb;">~34</div>
+                <div class="label">of 54 districts (2024-25 state data)</div>
+            </div>
+            <div class="stat-tile">
+                <div class="label">Districts Surveyed</div>
+                <div class="number" style="color:#6366f1;">31</div>
+                <div class="label">of 54 in 2025-26 survey</div>
+            </div>
+            <div class="stat-tile">
+                <div class="label">Survey: CS Offered</div>
+                <div class="number" style="color:#15803d;">28</div>
+                <div class="label">of 31 surveyed districts</div>
+            </div>
+            <div class="stat-tile">
+                <div class="label">Top Barrier</div>
+                <div class="number" style="color:#d97706;font-size:1.4rem;">$$</div>
+                <div class="label">Funding &mdash; #1 reported barrier</div>
+            </div>
+        </div>
+
+        <div class="callout green">
+            <strong>Key finding:</strong> When both data sources are combined, a majority of Alaska's school districts show some evidence of CS instruction. However, coverage is uneven, concentrated in larger urban districts, and often limited to upper grade levels. Rural and remote districts face significantly greater barriers.
+        </div>
+
+        <p>
+            The most pressing challenges are funding shortfalls, a shortage of qualified CS teachers, and geographic isolation — all of which disproportionately affect Alaska's small and rural districts. Neither data source alone tells the complete story, but together they provide a credible starting point for directing resources and measuring progress.
+        </p>
+    </section>
+
+    <!-- ─── About This Project ────────────────────────────────────────────── -->
+    <section id="about" class="section-anchor">
+        <h2>About This Project</h2>
+        <p>
+            The Alaska CS Landscape initiative was launched to build a data-driven foundation for expanding computer science education statewide. It is connected to the broader <strong>Alaska Computer Science State Plan</strong>, which sets a vision for ensuring every Alaska student has access to high-quality CS learning opportunities.
+        </p>
+        <p>
+            CS education — broadly defined to include coding, programming, computational thinking, robotics, game design, web development, cybersecurity, data science, and artificial intelligence — is increasingly critical for workforce readiness, civic participation, and economic opportunity. Alaska's geographic and demographic diversity makes equitable CS access both more urgent and more complex than in most states.
+        </p>
+        <p>
+            This report serves as a baseline. The data will be refined over time as more districts complete the survey, as course definitions are standardized, and as state reporting improves. The goal is not a static snapshot but a living dataset that tracks progress toward the state CS plan's goals.
+        </p>
+        <p>
+            The interactive map accompanying this report is available at: <a href="index.html">Alaska CS Education Map 2024&ndash;2026</a>
+        </p>
+    </section>
+
+    <!-- ─── Data Sources & Methodology ───────────────────────────────────── -->
+    <section id="data-sources" class="section-anchor">
+        <h2>Data Sources &amp; Methodology</h2>
+        <p>This report draws on two independent data sources. Neither alone is sufficient; together, they begin to paint a more complete picture.</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Characteristic</th>
+                    <th>2024-25 Course Data</th>
+                    <th>2025-26 CS Landscape Survey</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Source</strong></td><td>AK DEED district reports</td><td>SurveyMonkey (voluntary)</td></tr>
+                <tr><td><strong>Coverage</strong></td><td>All 54 districts (mandatory reporting)</td><td>31 of 54 districts as of this report</td></tr>
+                <tr><td><strong>School year</strong></td><td>2024-25</td><td>2025-26 (current year)</td></tr>
+                <tr><td><strong>Granularity</strong></td><td>School-level course names</td><td>District-level responses</td></tr>
+                <tr><td><strong>Course detail</strong></td><td>Course category names only</td><td>Grade bands, enrollment range, barriers</td></tr>
+                <tr><td><strong>Accuracy</strong></td><td>Subject to reporting interpretation; broad categories</td><td>Self-reported; voluntary; may include human error</td></tr>
+                <tr><td><strong>Update frequency</strong></td><td>Annual (school year)</td><td>As surveys are submitted</td></tr>
+                <tr><td><strong>Enrollment data</strong></td><td>None included</td><td>Ranges (1-25, 26-50, etc.) per district</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Methodological Notes &amp; Caveats</h3>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Course definitions are broad.</strong> The 2024-25 state data uses course categories like "Business Education," "Information Technology Services," and "Media &amp; Graphic Arts" — all of which may include computing components but are not exclusively CS courses. A district reporting these courses may or may not be offering what most would recognize as dedicated computer science instruction.</li>
+            <li><strong>Survey non-response is significant.</strong> With 23 districts not yet surveyed, the survey results cannot be treated as representative of the full state. Non-responding districts may be more likely to lack CS programs (and therefore less motivated to respond), potentially making the survey picture more optimistic than reality.</li>
+            <li><strong>Discrepancies between sources exist.</strong> Some districts appear in the 2024-25 course data but have not been surveyed. Others reported CS in the survey but do not appear in the 2024-25 course data — which may reflect courses added in the current year, definitional differences, or reporting gaps in state data. These discrepancies are visualized in the "Combined View" of the interactive map.</li>
+            <li><strong>Enrollment data is approximate.</strong> The survey collects enrollment in ranges, not exact counts. Enrollment totals in this report should be treated as order-of-magnitude estimates.</li>
+            <li><strong>District name matching is imperfect.</strong> Aligning district names across three systems (state course data, survey responses, and enrollment records) introduces some matching errors that may affect individual district records.</li>
+        </ul>
+    </section>
+
+    <!-- ─── Key Findings ─────────────────────────────────────────────────── -->
+    <section id="findings" class="section-anchor">
+        <h2>Key Findings</h2>
+
+        <h3>1. Most districts show some evidence of CS — but quality and depth vary widely</h3>
+        <p>
+            The 2024-25 state data shows approximately 34 of 54 districts reporting at least one CS or CS-adjacent course. The 2025-26 survey shows 28 of 31 responding districts confirming CS is offered. These figures suggest broad reach, but they mask enormous variation: a district with one "Intro to Computers" class in one middle school is counted the same as a district with AP Computer Science and a full K-12 CS pathway.
+        </p>
+        <div class="callout amber">
+            <strong>Caution:</strong> "CS offered" in this dataset does not mean rigorous, standards-aligned computer science instruction. Course categories like "Business Education" and "Media &amp; Graphic Arts" are counted because they may include computing skills, but they are not equivalent to dedicated CS courses.
+        </div>
+
+        <h3>2. CS instruction is heavily concentrated at the secondary level</h3>
+        <p>
+            Survey data on grade bands shows a clear pattern: CS is overwhelmingly concentrated in grades 9-12, with significantly less presence at the 6-8 level and very limited offerings in elementary grades (K-5). Enrollment data confirms this: approximately 26,654 students in grades 9-12 are in districts where CS is offered at that level, compared to only 2,770 K-2 students.
+        </p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Grade Band</th>
+                    <th>Enrollment in Districts w/ CS at That Level</th>
+                    <th>Enrollment Without CS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>K-2</td><td>2,770</td><td>25,945</td></tr>
+                <tr><td>3-5</td><td>3,329</td><td>28,101</td></tr>
+                <tr><td>6-8</td><td>17,192</td><td>13,980</td></tr>
+                <tr><td>9-12</td><td>26,654</td><td>16,438</td></tr>
+            </tbody>
+        </table>
+        <p class="text-xs text-gray-500 -mt-3 mb-3">Source: Alaska CS Landscape Survey (2025-26) · Enrollment from AK DEED Data Center (SY 2025-26) · Surveyed districts only</p>
+
+        <h3>3. Funding and teacher shortage are the top barriers</h3>
+        <p>
+            Among the 31 surveyed districts, the top five reported barriers to CS education are:
+        </p>
+        <ol class="list-decimal pl-6 space-y-1">
+            <li><strong>No funding for CS teaching positions</strong> &mdash; 14 districts</li>
+            <li><strong>Scheduling constraints or conflicts with other required courses</strong> &mdash; 14 districts</li>
+            <li><strong>No funding for CS curriculum or resources</strong> &mdash; 12 districts</li>
+            <li><strong>Lack of qualified or trained teachers</strong> &mdash; 9 districts</li>
+            <li><strong>Geographic isolation or small school size</strong> &mdash; 8 districts</li>
+        </ol>
+        <div class="callout">
+            <strong>Implication:</strong> Two of the top three barriers are funding-related and address-able through targeted grants or state appropriations. Teacher shortage and geographic isolation require longer-term systemic responses including virtual coursework, teacher certification pathways, and professional development.
+        </div>
+
+        <h3>4. Rural and remote districts face compounding challenges</h3>
+        <p>
+            Geographic isolation, small school size, and limited access to qualified teachers create a feedback loop that is particularly severe in rural Alaska. Small schools may have only one or two secondary teachers, making it impossible to add CS without eliminating another course. Virtual and hybrid CS instruction is one potential solution, but connectivity infrastructure varies significantly across the state.
+        </p>
+
+        <h3>5. Data gaps remain significant</h3>
+        <p>
+            23 of 54 districts have not yet responded to the survey. Several of these are among Alaska's smallest and most remote, which may also mean they are least likely to have formal CS programs. The true picture of CS access is likely more limited than current data suggests.
+        </p>
+    </section>
+
+    <!-- ─── Data Gaps ─────────────────────────────────────────────────────── -->
+    <section id="gaps" class="section-anchor">
+        <h2>Data Gaps &amp; Limitations</h2>
+
+        <div class="callout gray">
+            <strong>This section is important.</strong> The data in this report is a starting point, not a census. Stakeholders should understand what we do not yet know before drawing strong conclusions or making policy decisions based on this data alone.
+        </div>
+
+        <h3>What we don't know</h3>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Course quality and rigor.</strong> We know which districts report CS courses, but we do not know whether those courses align with CS standards, use evidence-based curricula, or are taught by CS-certified teachers.</li>
+            <li><strong>Actual enrollment numbers.</strong> The survey captures ranges (e.g., "26-50 students"), not exact enrollment. We cannot calculate precise statewide CS enrollment figures.</li>
+            <li><strong>Demographics of CS students.</strong> We have no data on whether CS access is equitable across race, gender, disability status, or socioeconomic background within districts.</li>
+            <li><strong>Teacher qualifications.</strong> We do not have statewide data on how many teachers are certified or trained to teach CS, or what percentage of CS courses are taught by qualified instructors.</li>
+            <li><strong>Outcomes and persistence.</strong> We have no data on student outcomes, course completion rates, or whether students go on to pursue computing careers or credentials.</li>
+            <li><strong>23 districts not yet surveyed.</strong> A complete picture requires hearing from all 54 districts.</li>
+        </ul>
+
+        <h3>How to improve the data</h3>
+        <ul class="list-disc pl-6 space-y-1">
+            <li>Encourage remaining districts to complete the <a href="https://www.surveymonkey.com/r/2FYFCHH" target="_blank">Alaska CS Landscape Survey</a></li>
+            <li>Work with AK DEED to refine course category definitions so CS courses are distinguishable from general technology or vocational courses</li>
+            <li>Add a CS-specific question to mandatory annual district reporting</li>
+            <li>Collect teacher qualification data through the existing educator certification system</li>
+            <li>Partner with districts to collect student-level demographic data for CS courses</li>
+        </ul>
+    </section>
+
+    <!-- ─── Recommendations ───────────────────────────────────────────────── -->
+    <section id="recommendations" class="section-anchor">
+        <h2>Recommendations</h2>
+        <p>Based on the findings above, we offer the following recommendations for policymakers, funders, and district leaders.</p>
+
+        <h3>For Policymakers &amp; the Legislature</h3>
+        <ol class="list-decimal pl-6 space-y-3">
+            <li>
+                <strong>Create a dedicated CS education funding stream.</strong>
+                Funding is the most frequently cited barrier. A per-district grant program — even modest in size — could enable districts to hire or train CS teachers, purchase curriculum, and offer courses where none currently exist.
+            </li>
+            <li>
+                <strong>Adopt a CS graduation requirement with implementation support.</strong>
+                Only a small number of surveyed districts require CS for graduation. A statewide graduation requirement with adequate lead time, teacher pipeline support, and rural accommodation provisions would create consistent demand and long-term commitment to CS education.
+            </li>
+            <li>
+                <strong>Fund CS teacher certification and professional development.</strong>
+                Many districts cite the lack of qualified teachers as a top barrier. Supporting existing teachers to add a CS endorsement, and creating CS-specific pathways in teacher preparation programs, addresses the supply-side problem.
+            </li>
+        </ol>
+
+        <h3>For Grant Programs &amp; Funders</h3>
+        <ol class="list-decimal pl-6 space-y-3">
+            <li>
+                <strong>Prioritize rural and remote districts.</strong>
+                The districts with the least CS access face the greatest barriers. Grant programs should include set-asides or bonus points for rural districts, small schools, and districts with high proportions of Alaska Native students.
+            </li>
+            <li>
+                <strong>Fund virtual CS coursework infrastructure.</strong>
+                For districts too small to hire a dedicated CS teacher, high-quality virtual CS courses are the most scalable solution. This requires both curriculum access and reliable broadband — a connectivity investment that pays dividends across subjects.
+            </li>
+            <li>
+                <strong>Support data collection and reporting capacity.</strong>
+                Better data enables better decisions. Funding district-level data coordinators or DEED data infrastructure improvements would improve the quality of future landscape reports.
+            </li>
+        </ol>
+
+        <h3>For District Leaders</h3>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Complete the <a href="https://www.surveymonkey.com/r/2FYFCHH" target="_blank">Alaska CS Landscape Survey</a> if your district has not yet done so.</li>
+            <li>Audit existing CS course offerings against CSTA K-12 CS standards to identify gaps in rigor and scope.</li>
+            <li>Explore virtual coursework options (e.g., Code.org, Khan Academy CS, Alaska Learning Network) for schools where hiring a CS teacher is not feasible.</li>
+            <li>Identify existing teachers interested in CS and connect them with professional development resources.</li>
+        </ol>
+    </section>
+
+    <!-- ─── Next Steps ────────────────────────────────────────────────────── -->
+    <section id="next-steps" class="section-anchor">
+        <h2>Next Steps</h2>
+
+        <h3>For this data initiative</h3>
+        <ul class="list-disc pl-6 space-y-1">
+            <li>Re-survey the remaining 23 districts and update the map and dashboard as responses come in</li>
+            <li>Refine district name matching to reduce data alignment errors</li>
+            <li>Expand the survey to capture teacher qualification data and curriculum information</li>
+            <li>Connect with districts showing discrepancies between the two data sources to verify and correct records</li>
+            <li>Produce a follow-up report after the 2025-26 school year with updated data from both sources</li>
+        </ul>
+
+        <h3>For the Alaska CS State Plan</h3>
+        <ul class="list-disc pl-6 space-y-1">
+            <li>Use this landscape data to set measurable baseline targets in the state CS plan</li>
+            <li>Present this data to the Alaska Legislature and State Board of Education to support CS policy conversations</li>
+            <li>Share findings with potential grant funders (NSF, Google.org, philanthropies) to demonstrate awareness and commitment</li>
+            <li>Engage the Alaska CS Education Coalition and local partners in interpreting and acting on the data</li>
+        </ul>
+
+        <h3>Keeping this map current</h3>
+        <p>
+            The interactive map at <a href="index.html">index.html</a> pulls 2024-25 course data live from a Google Sheet — any updates to that sheet will appear automatically. Survey data is updated by re-running <code class="bg-gray-100 px-1 rounded">run.py</code> and committing the new <code class="bg-gray-100 px-1 rounded">survey_dashboard_data.json</code> to the GitHub repository. The map is hosted on GitHub Pages at <a href="https://ak-compsci.github.io/AK-CS-Landscape-Survey/" target="_blank">ak-compsci.github.io/AK-CS-Landscape-Survey/</a>.
+        </p>
+    </section>
+
+    <!-- ─── Interactive Map ───────────────────────────────────────────────── -->
+    <section id="map" class="section-anchor">
+        <h2>Interactive Map</h2>
+        <p>The map below shows all 54 Alaska school districts colored by their CS data status. Use the toggle buttons to switch between the 2024-25 course data view, the 2025-26 survey view, and the combined confidence view. Click any district for detailed information from both sources.</p>
+        <iframe src="index.html" class="map-embed" title="Alaska CS Education Map 2024-2026" loading="lazy"></iframe>
+        <p class="text-xs text-gray-500 text-center">
+            <a href="index.html" target="_blank" class="text-blue-600">Open full map in a new tab &rarr;</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <div class="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 space-y-1">
+        <p>Prepared by: Alaska Department of Education &amp; Early Development (DEED)</p>
+        <p>Data sources: Alaska DEED district course reports (2024-25) &middot; Alaska CS Landscape Survey (2025-26) &middot; AK DEED Enrollment Data (SY 2025-26)</p>
+        <p>Interactive map and dashboard: <a href="https://ak-compsci.github.io/AK-CS-Landscape-Survey/" target="_blank">ak-compsci.github.io/AK-CS-Landscape-Survey/</a></p>
+        <p>Questions or corrections: Contact DEED &middot; <a href="https://www.surveymonkey.com/r/2FYFCHH" target="_blank">Submit survey data</a></p>
+    </div>
+
+</div><!-- /report-body -->
+</body>
+</html>
