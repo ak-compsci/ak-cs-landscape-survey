@@ -1,3 +1,5 @@
 # Source data processing (not needed for the dashboard)
 run.py
 combined_districts_topoJSON.json
+report.html
+slide_outline.md
